@@ -1,0 +1,9 @@
+{
+  "ExpandedNodes": [
+    "\\handlers",
+    "\\middleware",
+    "\\models",
+    "\\routes"
+  ],
+  "PreviewInSolutionExplorer": false
+}
