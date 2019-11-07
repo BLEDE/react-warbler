@@ -23,7 +23,7 @@ export default class AuthForm extends Component {
         this.props.onAuth(authType, this.state).then(() => {
             console.log("You logged in successfully!");
         });
-    }
+    };
 
     render() {
         const { email, username, password, profileImageUrl } = this.state
@@ -72,7 +72,7 @@ export default class AuthForm extends Component {
                                 />
                             </div>
                         )}
-                        <button type="submit" className="btn btn-pirmary btn-block btn-lg">
+                        <button type="submit" className="btn btn-primary btn-block btn-lg">
                             {buttonText}
                         </button>
                     </form>

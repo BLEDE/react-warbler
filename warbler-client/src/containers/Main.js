@@ -6,6 +6,7 @@ import AuthForm from "../components/AuthForm";
 import { authUser } from "../store/actions/auth";
 
 const Main = props => {
+    const { authUser } = props;
     return (
         <div className="container">
             <Switch>
@@ -42,4 +43,4 @@ function mapStateToProps(state) {
     };
 }
 
-export default withRouter(connect(mapStateToProps, null)(Main));
+export default withRouter(connect(mapStateToProps, { authUser })(Main));
