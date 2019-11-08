@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import currentUser from "../store/reducers/currentUser";
+import MessageTimeline from "./MessageTimeline";
 
 const Homepage = ({ currentUser }) => {
     if (!currentUser.isAuthenticated) {
@@ -16,7 +16,7 @@ const Homepage = ({ currentUser }) => {
     }
     return (
         <div>
-            <h1>You are logged in!</h1>
+            <MessageTimeline />
         </div>
     );
 };
