@@ -18,17 +18,17 @@ const messageSchema = new mongoose.Schema(
     }
 );
 
-messageSchema.pre('remove', async function (next) {
+messageSchema.pre('remove', async function(next) {
     // find a user
-    // remove id of message from the message array
+    // remove id of message from the messages array
     // save
     // next
     try {
         let user = await User.findById(this.user);
-        user.message.remove(this.id);
-        await user.save()
+        user.messages.remove(this.id);
+        await user.save();
         return next();
-    } catch (e) {
+    } catch (err) {
         return next(err);
     }
 });
